@@ -43,11 +43,10 @@ def getnamebynumber(number):
         with connection.cursor() as cursor:
             query= "select username from users where removed=0 and userid=%s;"
             cursor.execute(query, (int(number),))
-            results = cursor.fetchall()
-            print(results)
+            results = cursor.fetchone()
     finally:
-            return results
+            return results[0]
 
 
 if __name__ == "__main__":
-    getnumbers()
+    getnamebynumber(2)
