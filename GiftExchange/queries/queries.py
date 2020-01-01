@@ -45,8 +45,8 @@ def getnamebynumber(number):
             cursor.execute(query, (int(number),))
             results = cursor.fetchone()
     finally:
-            return results[0]
+            return results
 
 
 if __name__ == "__main__":
-    getnamebynumber(2)
+    getnamebynumber(3)
