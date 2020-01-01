@@ -1,31 +1,33 @@
 from flask import Flask, render_template, Response, request 
-import csv
-import sqlite3 as sql
-
+from queries.queries import *
 
 app = Flask(__name__)
 
-list_of_numbers=[1,2,3]
-list_of_names=["Dennis", "Ming", "Bernice"]
 
 @app.route("/")
 def index():
+    
     return render_template(
-        "index.html", numbers=list_of_numbers, names=list_of_names
+        "index.html", numbers=getnumbers()
     )
 
 @app.route("/fetch", methods=["GET","POST"])
 def fetch():
     if request.method == 'GET':
-        returned_number="Dennis"
-        if returned_number =="" or None:
-            return render_template("returnedname.html", name="No name")
-        else:
-            return render_template("returnedname.html", name="returned_number")
-
+        return('''
+        <h2>Are you sure you are authorized</h2>
+        ''')
     else:
+        user_removed = False
         number = request.form['number']
-        return render_template("returnedname.html", name=number)
+        name=getnamebynumber(number)
+        if name == None:
+            user_removed =True
+            return render_template("returnedname.html", name=name,user_removed=user_removed)
+
+        else:
+            removeuser(number)
+            return render_template("returnedname.html", name=name[0],user_removed=user_removed)
 
 
 if __name__ == "__main__":
