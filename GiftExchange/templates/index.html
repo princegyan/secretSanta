@@ -124,8 +124,8 @@
                     <form action="{{ url_for('fetch')}}" method="POST">
                     <select name="number">
                         <option value="">select from here </option>
-                        {% for i in numbers %}
-                        <option value="{{i}}">{{ i }}</option>
+                        {% for number in numbers %}
+                        <option value="{{number}}">{{ number }}</option>
                         {% endfor %}
                     </select>
                     <button type="submit" class="btn btn-primary">
