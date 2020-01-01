@@ -1,2 +1,2 @@
-# secretSanta
-## A simple application built for jouful way inc which has will randomly pair an individual with another in a gift exchange.
+# Joyful Way Inc. Secret Santa
+A simple application which randomly pairs an individual with another in a gift exchange.
