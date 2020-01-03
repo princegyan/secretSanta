@@ -8,7 +8,7 @@ app = Flask(__name__)
 def index():
     
     return render_template(
-        "index.html", numbers=getnumbers()
+        "index.html", numbers=getnumbers(40)
     )
 
 @app.route("/fetch", methods=["GET","POST"])

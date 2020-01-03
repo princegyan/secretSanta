@@ -46,8 +46,7 @@
                                 <div class="row">
                                     <!-- Header Logo -->
                                     <div class="header-logo col-md-12 col-12">
-                                        <a href="index.html" class="logo"><img src="./static/img/jwilogo2.png"
-                                                alt="logo"></a>
+                                        <a href="index.html" class="logo"><img src="./static/img/jwilogo2.png" alt="logo"></a>
                                     </div>
                                 </div>
                             </div>
@@ -76,9 +75,7 @@
 
                         <h2>Joyful Way Cape Coast</h2>
                         <h1>Secret Santa</h1>
-                        <p>For God so loved the world that He gave His one and only son, that whosoever belives in Him
-                            shall not perish but have an ever lasting life. For God did not sen His son into the world
-                            to condem the world, but to save the world through
+                        <p>For God so loved the world that He gave His one and only son, that whosoever belives in Him shall not perish but have an ever lasting life. For God did not sen His son into the world to condem the world, but to save the world through
                             him.
                         </p>
                         <a href="#">LET LOVE LEAD</a>
@@ -98,8 +95,8 @@
 
                         <h2>Joyful Way Cape Coast</h2>
                         <h1>Secret Santa</h1>
-                        <p>"Whatever you did for one of the least of the brothers of mine, you did for me" -- Jesus
-                            Christ</p>
+                        <p>"Whatever you did for one of the least of the brothers of mine, you did for me" -- Jesus Christ
+                        </p>
                         <a href="#">LET LOVE LEAD</a>
 
                     </div>
@@ -116,28 +113,27 @@
             <div>
 
             </div>
-            <div>
+            <div style="width: 50%">
                 <div>
                     <label>
                         <h3>Select Number</h3>
                     </label>
                     <form action="{{ url_for('fetch')}}" method="POST">
-                    <select name="number">
-                        <option value="">select from here </option>
+                        <select name="number">
+                        <option value="">select number from here </option>
                         {% for number in numbers %}
                         <option value="{{number}}">{{ number }}</option>
                         {% endfor %}
                     </select>
-                    <button type="submit" class="btn btn-primary">
+                        <button type="submit" class="btn btn-primary">
                         Submit
                     </button>
-                    <!-- <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        <!-- <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                         Submit
                     </button> -->
-                </form>
+                    </form>
                     <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -173,7 +169,7 @@
                             <div class="single-banner">
                                 <img src="./static/img/banner/2.jpg" alt="banner">
                                 <div class="banner-content right">
-                                    <h1 class="white"><span>Buy Gift</span>For Someone</h1>
+                                    <h1 class="white"><span>Buy Gift</span class="red">For Someone</h1>
                                     <a href="#" class="button">Let Love Lead</a>
                                 </div>
                             </div>
@@ -185,10 +181,10 @@
                             <div class="single-banner">
                                 <img src="./static/img/banner/2.jpg" alt="banner">
                                 <div class="banner-content left">
-                                    <h2 class="black"><span class="small">Your <span class="red">
-                                                Gift</span></span><span class="red">Shouldn't very expensive</span>
-                                    </h2>
-                                    <a href="#" class="link">Let Love Lead</a>
+                                    <h2 class="black"><span class="small">Your<span class="red"> 
+                                        Gift</span></span><span class="red">Shouldn't be very expensive</span>
+                                        </h2>
+                                        <a href="#" class="link">Let Love Lead</a>
                                 </div>
                             </div>
 
